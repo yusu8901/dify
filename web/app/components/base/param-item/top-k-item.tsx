@@ -15,10 +15,10 @@ const maxTopK = (() => {
   const configValue = parseInt(globalThis.document?.body?.getAttribute('data-public-top-k-max-value') || '', 10)
   if (configValue && !isNaN(configValue))
     return configValue
-  return 200
+  return 100
 })()
 const VALUE_LIMIT = {
-  default: 5,
+  default: 100,
   step: 1,
   min: 1,
   max: maxTopK,
